@@ -42,6 +42,7 @@ const PAGE_MAP = {
   '/shop':             PageShop,
 
   '/hire':    PageHire,
+  '/testimonies': PageTestimonies,
   '/contact': PageContact,
 };
 

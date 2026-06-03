@@ -99,6 +99,12 @@ function App() {
         { id: 'hire', label: 'Hire Crystal · Speaker & Performer', h: 5000, comp: PageHire },
       ],
     },
+    {
+      id: 'why', title: '07 · Why Work With Crystal',
+      pages: [
+        { id: 'testimonies', label: 'Testimonies', h: 7400, comp: PageTestimonies },
+      ],
+    },
   ];
 
   return (

@@ -45,19 +45,20 @@ const NAV = [
     { to: '/masterclass/dreamers-secrets',    label: 'Courageous Dreamers Secrets' },
     { to: '/masterclass/money-miracles',      label: 'Money, Miracles, & Manifestation' },
   ]},
-  { id: 'leadership', label: 'Leadership Programs', items: [
+  { id: 'leadership', label: 'Programs', items: [
     { to: '/miracle-lab', label: 'Miracle Lab' },
     { to: '/dreamers',    label: 'Courageous Dreamers' },
     { to: '/speakers',    label: 'Courageous Speakers' },
     { to: '/leaders',     label: 'Courageous Leaders' },
     { to: '/visionary',   label: 'Courageous Visionaries' },
   ]},
-  { id: 'immersions', label: 'Immersions & Events', items: [
+  { id: 'immersions', label: 'Immersions', items: [
     { to: '/immersions#june-6', label: 'June 6th Creative Immersion' },
   ]},
-  { id: 'digital', label: 'Digital Products', to: '/digital-products' },
-  { id: 'shop',    label: 'Shop',             to: '/shop' },
-  { id: 'hire',    label: 'Hire Crystal',     to: '/hire' },
+  { id: 'digital', label: 'Digital', to: '/digital-products' },
+  { id: 'shop',    label: 'Shop',     to: '/shop' },
+  { id: 'testimonies', label: 'Testimonies', to: '/testimonies' },
+  { id: 'hire',    label: 'Hire Crystal', to: '/hire' },
 ];
 
 function RouterProvider({ children }) {
@@ -323,22 +324,22 @@ function RsNav() {
   return (
     <nav style={{
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      padding: '0 56px', borderBottom: `1px solid ${R_PALETTE.hairline}`,
+      padding: '0 40px', borderBottom: `1px solid ${R_PALETTE.hairline}`,
       position: 'sticky', top: 0, background: 'rgba(11, 9, 8, 0.92)',
       backdropFilter: 'blur(12px)', zIndex: 50,
     }}>
       <RLink to="/" style={{
-        display: 'flex', alignItems: 'center', gap: 14, color: R_PALETTE.cream,
+        display: 'flex', alignItems: 'center', gap: 12, color: R_PALETTE.cream,
         textDecoration: 'none', padding: '24px 0',
       }}>
-        <span style={{ width: 12, height: 12, borderRadius: '50%', background: ACCENT }} />
-        <span style={{ fontFamily: '"Anton", sans-serif', fontSize: 22,
-          letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+        <span style={{ width: 11, height: 11, borderRadius: '50%', background: ACCENT }} />
+        <span style={{ fontFamily: '"Anton", sans-serif', fontSize: 20,
+          letterSpacing: '0.06em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
           Courageous / Leaders
         </span>
       </RLink>
 
-      <div style={{ display: 'flex', gap: 28 }}>
+      <div style={{ display: 'flex', gap: 22 }}>
         {NAV.map((entry) => (
           <NavItem key={entry.id} entry={entry}
             isOpen={openId === entry.id}
@@ -350,8 +351,8 @@ function RsNav() {
       <RLink to="/contact" style={{
         color: ACCENT, textDecoration: 'none',
         fontFamily: '"JetBrains Mono", monospace',
-        fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase',
-        fontWeight: 700, padding: '24px 0',
+        fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase',
+        fontWeight: 700, padding: '24px 0', whiteSpace: 'nowrap',
       }} className="rs-link-line">Contact</RLink>
     </nav>
   );
